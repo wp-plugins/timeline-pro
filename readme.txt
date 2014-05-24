@@ -55,6 +55,11 @@ parameter:<br />
 You control shortcode parameter via admin page "Timeline Pro Settings"
 
 
+== Screenshots ==
+
+1. Timeline.
+2. Timeline - No more post.
+2. Timeline - Load more post.
 
 
 
