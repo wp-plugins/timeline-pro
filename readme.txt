@@ -1,6 +1,6 @@
 === Timeline Pro ===
-Contributors: KentoThemes
-Donate link: 
+Contributors: kentothemes
+Donate link: http://kentothemes.com/donate/
 Tags:  responsive timeline, Responsive Timeline WordPress,Timeline for WordPress, Timeline
 Requires at least: 3.8
 Tested up to: 3.9

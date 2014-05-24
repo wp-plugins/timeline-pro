@@ -78,8 +78,8 @@
 	<div id="icon-tools" class="icon32"><br></div><?php echo "<h2>".__('Kento Timeline Settings')."</h2>";?>
 		<form  method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
 	<input type="hidden" name="timeline_pro_hidden" value="Y">
-        <?php settings_fields( 'kads_plugin_options' );
-				do_settings_sections( 'kads_plugin_options' );
+        <?php settings_fields( 'timeline_pro_plugin_options' );
+				do_settings_sections( 'timeline_pro_plugin_options' );
 
 		?>
 
@@ -117,9 +117,21 @@ $post_types = get_post_types( '', 'names' );
 
 foreach ( $post_types as $post_type ) {
 
-   echo '<label for="timeline_pro-posttype['.$post_type.']"><input type="checkbox" name="timeline_pro_posttype['.$post_type.']" id="timeline_pro-posttype['.$post_type.']"  value ="1" ' ?> 
-   <?php if ( isset( $timeline_pro_posttype[$post_type] ) ) echo "checked"; ?>
-   <?php echo' >'. $post_type.'</label><br />' ;
+	if($post_type=='post')
+		{
+		   echo '<label for="timeline_pro-posttype['.$post_type.']"><input type="checkbox" name="timeline_pro_posttype['.$post_type.']" id="timeline_pro-posttype['.$post_type.']"  value ="1" ' ?> 
+		   <?php if ( isset( $timeline_pro_posttype[$post_type] ) ) echo "checked"; ?>
+		   <?php echo' >'. $post_type.'</label><br />' ;
+	   
+		}
+	else
+		{
+		   echo '<label for="timeline_pro-posttype['.$post_type.']"><input type="checkbox" name="timeline_pro_posttype['.$post_type.']" id="timeline_pro-posttype['.$post_type.']"  value ="1" ' ?> 
+		   <?php if ( isset( $timeline_pro_posttype[$post_type] ) ) echo "checked"; ?>
+		   <?php echo' >'. $post_type.'</label><br />' ;
+   
+		}
+
 }
 ?>
                            
@@ -147,7 +159,7 @@ foreach ( $post_types as $post_type ) {
 		<td style="vertical-align:middle;">
         <select name="timeline_pro_content" class="timeline_pro_content" >
         	<option value="content" <?php if (  $timeline_pro_content=="content") echo "selected"; ?> >Full Content</option>
-            <option value="excrept" <?php if (  $timeline_pro_content=="excrept") echo "selected"; ?> >Excerpt</option>       
+            <option   value="excrept" <?php if (  $timeline_pro_content=="excrept") echo "selected"; ?> >Excerpt</option>       
         </select>
         <br />
         <br />

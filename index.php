@@ -4,7 +4,7 @@ Plugin Name: Timeline Pro
 Plugin URI: http://kentothemes.com
 Description: Timeline Pro is pure HTML & CSS timeline style grid for WordPress.
 Version: 1.0
-Author: KentoThemes
+Author: kentothemes
 Author URI: http://kentothemes.com
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
