@@ -47,11 +47,20 @@ Timeline Pro is pure HTML & CSS timeline style grid for WordPress. Very lightwei
 Please see documentation: http://kentothemes.com/doc/timeline-pro/
 
 
+== Screenshots ==
+
+1. Timeline.
+2. No More Post.
+3. Load More Post.
 
 
 
 == Changelog ==
 
+
+= 1.1 =
+* removed shortcode attributes.
+ 
 
 
 = 1.0 =
