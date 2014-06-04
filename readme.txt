@@ -53,6 +53,10 @@ Please see documentation: http://kentothemes.com/doc/timeline-pro/
 == Changelog ==
 
 
+= 1.1 =
+* removed shortcode attributes.
+ 
+
 
 = 1.0 =
 * Initial release
