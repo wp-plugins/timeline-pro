@@ -260,7 +260,6 @@ opacity:1;
   display: inline-block;
   float: left;
   font-size: 11px;
-  font-weight: bold;
   margin-bottom: 10px;
   margin-top: 10px;
   text-align: left;
@@ -330,12 +329,15 @@ color: #000;
   overflow: hidden;
   padding: 10px 10px 15px;
   text-align: left;
+  color:#000;
 }
 
 .timeline li .content .body .read-more {
+  display: block;
   font-weight: bold;
+  margin-top: 10px;
+  color:#000;
 }
-
 
 
 
@@ -531,8 +533,13 @@ color:#fff;
 
 
 
+/*************************/
 
-
-
+.timeline_pro_loading_taxonomy_category {
+  background: url("loading.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  display: none;
+  height: 20px;
+  width: 30px;
+}
 
 

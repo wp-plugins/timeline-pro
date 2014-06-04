@@ -44,8 +44,47 @@ jQuery(document).ready(function(jQuery)
 	
 	
 	
+		jQuery(".timeline_pro_taxonomy_reset").click(function()
+			{
+				jQuery('input[name=timeline_pro_taxonomy]').attr('checked', false);
+				jQuery('.timeline_pro_taxonomy_category').attr('checked', false);
+				})
 	
 	
+	
+	
+	
+		jQuery(".timeline_pro_posttype").click(function()
+			{
+				
+			jQuery('.timeline_pro_taxonomy').attr('checked', false);	
+	
+			})
+	
+		jQuery(".timeline_pro_taxonomy").click(function()
+			{
+				
+			jQuery('.timeline_pro_posttype').attr('checked', false);
+				
+				
+				
+				var taxonomy = jQuery(this).val();
+				jQuery(".timeline_pro_loading_taxonomy_category").css('display','block');
+
+						jQuery.ajax(
+							{
+						type: 'POST',
+						url: timeline_pro_ajax.timeline_pro_ajaxurl,
+						data: {"action": "timeline_pro_get_taxonomy_category","taxonomy":taxonomy},
+						success: function(data)
+								{	
+									jQuery(".timeline_pro_taxonomy_category").html(data);
+									jQuery(".timeline_pro_loading_taxonomy_category").fadeOut('slow');
+								}
+							});
+
+		
+			})
 	
 	
 	
@@ -56,12 +95,15 @@ jQuery(document).ready(function(jQuery)
 
 		jQuery("#load-more .content").addClass("loading");
 
-				var posttype = jQuery(this).attr("posttype");
+
+				var timeline_id = jQuery(this).attr("timeline_id");
+				
+				
+				
 				var per_page = parseInt(jQuery(this).attr("per_page"));
 				var offset = parseInt(jQuery(this).attr("offset"));
 				var has_post = jQuery(this).attr("has_post");
 
-				var last_class = jQuery("ul.timeline li:last").attr("data-class");
 				
 				jQuery("#load-more .content").html("loading...");
 				
@@ -79,7 +121,7 @@ jQuery(document).ready(function(jQuery)
 							{
 						type: 'POST',
 						url: timeline_pro_ajax.timeline_pro_ajaxurl,
-						data: {"action": "timeline_pro_ajax_display","posttype":posttype,"offset":offset,"last_class":last_class},
+						data: {"action": "timeline_pro_ajax_display","timeline_id":timeline_id,"offset":offset},
 						success: function(data)
 								{	
 									jQuery("ul.timeline").append(data);
@@ -89,7 +131,7 @@ jQuery(document).ready(function(jQuery)
 									jQuery("#load-more").attr("offset",offest_last);
 									
 									
-									
+
 
 									jQuery("ul.timeline li.new").hide();
 								
