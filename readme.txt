@@ -33,7 +33,7 @@ Timeline Pro is pure HTML & CSS timeline style grid for WordPress. Very lightwei
 
  <br />
 <strong>Premium Version available for this plugin:</strong>
- http://kentothemes.com/items/social/timeline-pro-responsive-timeline-for-wordpress/
+http://codecanyon.net/item/timeline-pro-responsive-timeline-for-wordpress/8143205
  
  
 
